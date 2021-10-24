@@ -22,10 +22,10 @@ window.Pusher = require('pusher-js');
 
 window.Echo = new Echo({
     broadcaster: 'pusher',
-    key: 'ASDASD2121',
+    key: process.env.MIX_PUSHER_APP_KEY,
     wsHost: '127.0.0.1',
     encrypted: true,
-    cluster: 'mt1',
+    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
     forceTLS: false,
     wsPort: 6001,
     wssPort: 6001,
