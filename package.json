@@ -2,8 +2,7 @@
     "name": "laravel-vue-tailwindcss-template",
     "private": false,
     "scripts": {
-        "start": "npm run development",
-        "build": "npm run dev",
+        "build": "npm run dev && npm run prod",
         "dev": "npm run development",
         "development": "cross-env node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",
@@ -13,7 +12,7 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "autoprefixer": "9",
+        "autoprefixer": "^10.3.7",
         "axios": "^0.19",
         "bootstrap": "^4.0.0",
         "browser-sync": "^2.26.13",
@@ -23,21 +22,20 @@
         "laravel-mix-artisan-serve": "^1.0.1",
         "laravel-mix-purgecss": "^5.0.0",
         "lodash": "^4.17.19",
-        "postcss": "7",
+        "postcss": "^8.3.11",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.20.1",
         "sass-loader": "^8.0.0",
+        "tailwindcss": "^2.2.17",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
         "laravel-echo": "^1.11.2",
         "mix-env-file": "^0.1.0",
-        "pusher-js": "^7.0.3",
-        "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+        "pusher-js": "^7.0.3"
     },
     "engines": {
-        "node": "14.x",
-        "npm": "6.x"
+        "node": "14.x"
     }
 }
