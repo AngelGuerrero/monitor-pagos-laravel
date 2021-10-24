@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('test', function () {
+    event(new \App\Events\NewMessage("Hello from api"));
+
+    return response()->json([
+        "message" => "Event sent"
+    ]);
+});

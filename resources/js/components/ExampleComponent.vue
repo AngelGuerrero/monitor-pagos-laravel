@@ -1,13 +1,13 @@
 <template>
   <div
-    class="container
-        bg-green-400
-        text-white
-        shadow-lg
-        p-5
-        rounded
-        text-center
-        "
+    class="
+    container
+    bg-green-400
+    text-white
+    shadow-lg
+    p-5
+    rounded
+    text-center"
   >
     <h1 class="text-4xl">{{ message }}</h1>
     <h3 class="text-1xl">This works!</h3>
@@ -23,6 +23,12 @@ export default {
       type: String,
       default: 'Yay!'
     }
+  },
+
+  created() {
+    window.Echo.channel('messages').listen('.onNewMessage', e => {
+      console.log('event :>> ', e)
+    })
   }
 }
 </script>
