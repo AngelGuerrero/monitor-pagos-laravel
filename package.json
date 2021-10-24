@@ -3,7 +3,7 @@
     "private": false,
     "scripts": {
         "start": "npm run development",
-        "build": "npm run prod",
+        "build": "npm run dev",
         "dev": "npm run development",
         "development": "cross-env node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",
